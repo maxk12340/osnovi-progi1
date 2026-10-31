@@ -23,19 +23,19 @@ int main(){
     for (int i = 0; i < 10; i++){
         for (int j = 0; j < 10; j++){
             
-        if  (
-             (j > 0  &&            matrix[i][j] >= matrix[i][j-1])    ||
-             (i > 0  &&            matrix[i][j] >= matrix[i-1][j])    ||
-             (j < 9  &&            matrix[i][j] >= matrix[i][j+1])    ||
-             (i < 9  &&            matrix[i][j] >= matrix[i+1][j])    ||
-             (j < 9  && i < 9   && matrix[i][j] >= matrix[i+1][j+1])  ||
-             (j > 0  && i > 0   && matrix[i][j] >= matrix[i-1][j-1])  ||
-             (j > 0  && i < 9   && matrix[i][j] >= matrix[i+1][j-1])  ||
-             (j < 9  && i > 0   && matrix[i][j] >= matrix[i-1][j+1])  
-            ){}
-        else {cout << "Минимум " << matrix[i][j] << " координаты: [" << i+1 << "] [" << j+1 << "]" << endl;}
-            
-        
+            if  (
+                (j > 0  &&            matrix[i][j] >= matrix[i][j-1])    ||
+                (i > 0  &&            matrix[i][j] >= matrix[i-1][j])    ||
+                (j < 9  &&            matrix[i][j] >= matrix[i][j+1])    ||
+                (i < 9  &&            matrix[i][j] >= matrix[i+1][j])    ||
+                (j < 9  && i < 9   && matrix[i][j] >= matrix[i+1][j+1])  ||
+                (j > 0  && i > 0   && matrix[i][j] >= matrix[i-1][j-1])  ||
+                (j > 0  && i < 9   && matrix[i][j] >= matrix[i+1][j-1])  ||
+                (j < 9  && i > 0   && matrix[i][j] >= matrix[i-1][j+1])){       
+                }
+            else {
+                cout << "Минимум " << matrix[i][j] << " координаты: [" << i+1 << "] [" << j+1 << "]" << endl;
+            }
         }
     }
 
